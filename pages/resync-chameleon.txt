@@ -1,0 +1,6 @@
+chameleon stop_replica --source mysql --debug
+yes YES | chameleon detach_replica --source mysql --debug
+chameleon add_source --config default --source mysql --debug
+chameleon init_replica --config default --source mysql --debug
+chameleon enable_replica --config default --source mysql --debug
+chameleon start_replica --config default --source mysql
